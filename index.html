@@ -3,36 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de David</title>
+    <title>David Fitness</title>
+
     <style>
+        /* ==== GLOBAL ==== */
         body {
-            background: #f2f2f2;
+            margin: 0;
             font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding-top: 80px;
+       30px;
+            padding: 15px 0;
         }
-        h1 {
-            color: #0058a3;
-            font-size: 3em;
+
+        nav a {
+            color: #eee;
+            text-decoration: none;
+            font-weight: bold;
         }
-        p {
-            font-size: 1.2em;
+
+        nav a:hover {
+            color: #00d4ff;
         }
+
+        section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        /* ==== HERO ==== */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1500&q=80') no-repeat center/cover;
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        /* ==== PROGRAMMES ==== */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
         .card {
             background: white;
-            padding: 20px 40px;
             border-radius: 10px;
-            display: inline-block;
-            box-shadow: 0px 4px 14px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin-top: 10px;
+        }
+
+        /* ==== CONTACT ==== */
+        form {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 12px;
+            background: #00aaff;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #008ed6;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+            margin-top: 50px;
         }
     </style>
+
+    <script>
+        function sendMessage() {
+            alert("Merci pour ton message ! David te répondra très bientôt 💪");
+        }
+    </script>
+
 </head>
 <body>
 
-    <div class="card">
-        <h1>Bienvenue sur le site de David</h1>
-        <p>Ceci est un site HTML simple généré automatiquement 😄</p>
-    </div>
+    <header>
+        <h1>David Fitness</h1>
+        <p>Ton coach personnel pour atteindre tes objectifs</p>
+    </header>
+
+    <nav>
+        #accueilAccueil</a>
+        #programmesProgrammes</a>
+        #contactContact</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="accueil">
+        <div class="hero">
+            Transforme ton corps avec David 💪
+        </div>
+    </section>
+
+    <!-- PROGRAMMES -->
+    <section id="programmes">
+        <h2>Programmes Fitness</h2>
+        <p>Choisis le programme qui correspond à ton objectif.</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599053933877-34e2c96c392e?auto=format&fit=crop&w=800&q=80">
+                <h3>Musculation</h3>
+                <p>Programme complet pour gagner en force et en masse musculaire.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599052158703-1e4b907d869d?auto=format&fit=crop&w=800&q=80">
+                <h3>Perte de poids</h3>
+                <p>Brûle les graisses rapidement avec un entraînement adapté.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80">
+                <h3>Gainage & Core</h3>
+                <p>Renforce ton centre du corps pour une meilleure posture.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Une question ? Envie de commencer un coaching avec David ?</p>
+
+        <form onsubmit="sendMessage(); return false;">
+            <input type="text" placeholder="Ton nom" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Ton message..." required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2026 - Site créé pour David | Coaching Fitness & Santé
+    </footer>
 
 </body>
 </html>
